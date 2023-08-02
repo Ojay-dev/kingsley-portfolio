@@ -1,5 +1,5 @@
 <script setup>
-import useProjects from '../composable/useProjects';
+import useProjects from '../composables/useProjects';
 import ChevronRightIcon from '../components/icons/IconChevronRight.vue';
 import ChevronRightSmIcon from '../components/icons/IconChevronRightSM.vue';
 import ProjectItem from '../components/ProjectItem.vue';
@@ -56,41 +56,40 @@ const { projects } = useProjects(); // Access the projects data using the compos
     </div>
 
     <!-- Body Section -->
-    <div>
-      <div
-        class="mx-5 mb-36 grid flex-col flex-wrap justify-start gap-x-14 gap-y-14 md:mx-10 md:grid-cols-2 lg:gap-y-20"
-      >
-        <template v-for="item in projects" :key="item.id">
-          <ProjectItem :bgColor="item.bgColor">
-            <template #icon> <component :is="item.icon" /> </template>
 
-            <template #heading>
-              {{ item.name }}
-            </template>
+    <div
+      class="mx-5 mb-36 grid flex-col flex-wrap justify-start gap-x-14 gap-y-14 md:mx-10 md:grid-cols-2 lg:gap-y-20"
+    >
+      <template v-for="item in projects" :key="item.id">
+        <ProjectItem :bgColor="item.bgColor">
+          <template #icon> <component :is="item.icon" /> </template>
 
-            <template #description>
-              {{ item.description }}
-            </template>
+          <template #heading>
+            {{ item.name }}
+          </template>
 
-            <template #default>
-              <router-link
-                :to="{ name: 'myWorks', params: { workId: item.id } }"
-                class="flex items-center gap-x-[10px] text-sm font-semibold text-[#3185F7]"
-                >View Case Study
-                <ChevronRightSmIcon />
-              </router-link>
-            </template>
+          <template #description>
+            {{ item.description }}
+          </template>
 
-            <template #appImage>
-              <img
-                :alt="item.name"
-                :src="item.appThumbnail"
-                :class="item.alignRight ? 'ml-auto' : 'mx-auto'"
-              />
-            </template>
-          </ProjectItem>
-        </template>
-      </div>
+          <template #default>
+            <router-link
+              :to="{ name: 'work', params: { workId: item.id } }"
+              class="flex items-center gap-x-[10px] text-sm font-semibold text-[#3185F7]"
+              >View Case Study
+              <ChevronRightSmIcon />
+            </router-link>
+          </template>
+
+          <template #appImage>
+            <img
+              :alt="item.name"
+              :src="item.appThumbnail"
+              :class="item.alignRight ? 'ml-auto' : 'mx-auto'"
+            />
+          </template>
+        </ProjectItem>
+      </template>
     </div>
   </main>
 </template>

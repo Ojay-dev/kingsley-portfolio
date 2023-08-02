@@ -4,13 +4,16 @@ import CategoryIcon from '../components/icons/IconCategory.vue';
 import GraphIcon from '../components/icons/IconGraph.vue';
 import HeartIcon from '../components/icons/IconHeart.vue';
 
-import LaddaApp from '@/assets/LaddaApp.svg';
-import LaddaAppThumbnail from '@/assets/LaddaAppThumbnail.svg';
-import LetshegoApp from '@/assets/LetshegoApp.svg';
-import PrestmitApp from '@/assets/PrestmitApp.svg';
-import DryvaApp from '@/assets/DryvaApp.svg';
-import SavologyApp from '@/assets/SavologyApp.svg';
-import SavologyAppThumbnail from '@/assets/SavologyAppThumbnail.svg';
+import LaddaApp from '@/assets/svgs/LaddaApp.svg';
+import LaddaAppThumbnail from '@/assets/svgs/LaddaAppThumbnail.svg';
+import LetshegoApp from '@/assets/svgs/LetshegoApp.svg';
+import LetshegoAppThumbnail from '@/assets/svgs/LetshegoAppThumbnail.svg';
+import PrestmitApp from '@/assets/svgs/PrestmitApp.svg';
+import PrestmitAppThumbnail from '@/assets/svgs/PrestmitAppThumbnail.svg';
+import DryvaApp from '@/assets/svgs/DryvaApp.svg';
+import DryvaAppThumbnail from '@/assets/svgs/DryvaAppThumbnail.svg';
+import SavologyApp from '@/assets/svgs/SavologyApp.svg';
+import SavologyAppThumbnail from '@/assets/svgs/SavologyAppThumbnail.svg';
 import { shallowRef } from 'vue';
 
 // Project data
@@ -33,6 +36,7 @@ const projects = [
       'An SMS hub containing different SMS API providers, which routes SMS based on the effective SMS provider in the receiver’s country.',
     icon: ActivityIcon,
     bgColor: 'bg-[#FEF8EF]',
+    appThumbnail: LetshegoAppThumbnail,
     appImage: LetshegoApp,
     alignRight: true
   },
@@ -43,6 +47,7 @@ const projects = [
       'Prestmit is a fintech product that allows users to trade, buy and sell various digital assets including gift cards, bitcoins, USDT, litecoins, dogecoins, etc.',
     icon: CategoryIcon,
     bgColor: 'bg-[#FBF3F6]',
+    appThumbnail: PrestmitAppThumbnail,
     appImage: PrestmitApp
   },
   {
@@ -52,6 +57,7 @@ const projects = [
       'Dryva is a professional hiring service that connects trusted drivers to clients who already own vehicles but require drivers.',
     icon: BookmarkIcon,
     bgColor: 'bg-[#E5F5FE]',
+    appThumbnail: DryvaAppThumbnail,
     appImage: DryvaApp
   },
   {
