@@ -1,5 +1,4 @@
-<template>
-  <svg
+<svg
     width="497"
     height="322"
     viewBox="0 0 497 322"
@@ -1668,4 +1667,4 @@
       />
     </defs>
   </svg>
-</template>
+

@@ -8,4 +8,66 @@
   .header-box-shadow {
     box-shadow: 0px 2px 4px 0px rgba(171, 171, 171, 0.08);
   }
+
+  footer {
+    grid-template-areas:
+      'logo logo logo'
+      'links links links'
+      'email email email'
+      'social-media social-media social-media'
+      'copyright copyright copyright';
+
+    @media screen and (min-width: 992px) {
+      grid-template-areas:
+        'logo logo social-media'
+        'copyright email links';
+    }
+  }
+
+  .footer-logo {
+    grid-area: logo;
+  }
+
+  .footer-social-media {
+    grid-area: social-media;
+
+    @media screen and (min-width: 992px) {
+      justify-self: end;
+    }
+  }
+
+  .footer-email {
+    grid-area: email;
+
+    @media screen and (min-width: 992px) {
+      justify-self: center;
+    }
+  }
+
+  .footer-links {
+    grid-area: links;
+
+    @media screen and (min-width: 992px) {
+      justify-self: end;
+    }
+  }
+
+  .footer-copyright {
+    grid-area: copyright;
+  }
+
+  /* Add a divider between router-link elements using the Tailwind CSS 'border-r' utility class */
+  footer nav a {
+    @apply border-r border-r-[#EBF2F8] px-3; /* Apply border-right and right padding to separate the links visually */
+  }
+
+  footer nav a:first-child {
+    @apply pl-0; /* Remove the left padding from the first link */
+  }
+
+  /* Remove the divider from the last router-link element */
+  footer nav a:last-child {
+    border-right: none; /* Remove the border-right from the last link */
+    @apply pr-0; /* Remove the right padding from the last link */
+  }
 }
