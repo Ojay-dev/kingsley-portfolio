@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { useRoute } from 'vue-router';
 import useProjects from '@/composables/useProjects';
-import ChevronRightSmIcon from '@/components/icons/IconChevronRightSm.vue';
+import ChevronRightSmIcon from '@/components/icons/IconChevronRightSM.vue';
 
 const route = useRoute();
 
@@ -49,24 +49,18 @@ function getNextProject() {
 
       <div>
         <h2 class="mb-6 text-2xl font-semibold text-header-text">Project Goal</h2>
-        <ul
-          v-for="(item, idx) in project.goal"
-          :key="idx"
-          class="flex list-disc flex-col gap-y-5 pl-5 text-xl text-body-text md:gap-y-2"
-        >
+        <ul v-for="(item, idx) in project.goal" :key="idx"
+          class="flex list-disc flex-col gap-y-5 pl-5 text-xl text-body-text md:gap-y-2">
           <li>{{ item }}</li>
         </ul>
       </div>
     </div>
 
-    <div
-      class="mx-5 mb-[106px] mt-24 flex max-w-screen-xl justify-end md:mx-10 lg:mx-48 2xl:mx-auto"
-    >
-      <button
-        @click="getNextProject"
-        class="flex cursor-pointer items-center gap-x-6 border-b-2 border-b-body-text text-xl leading-10"
-      >
-        Next <ChevronRightSmIcon />
+    <div class="mx-5 mb-[106px] mt-24 flex max-w-screen-xl justify-end md:mx-10 lg:mx-48 2xl:mx-auto">
+      <button @click="getNextProject"
+        class="flex cursor-pointer items-center gap-x-6 border-b-2 border-b-body-text text-xl leading-10">
+        Next
+        <ChevronRightSmIcon />
       </button>
     </div>
   </main>

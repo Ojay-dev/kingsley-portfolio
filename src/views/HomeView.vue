@@ -2,7 +2,7 @@
 import gsap from 'gsap';
 import useProjects from '@/composables/useProjects';
 import ChevronRightIcon from '@/components/icons/IconChevronRight.vue';
-import ChevronRightSmIcon from '@/components/icons/IconChevronRightSm.vue';
+import ChevronRightSmIcon from '@/components/icons/IconChevronRightSM.vue';
 import ProjectItem from '@/components/ProjectItem.vue';
 
 
