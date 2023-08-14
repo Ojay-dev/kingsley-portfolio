@@ -2,23 +2,15 @@
 
 <template>
   <main class="max-w-screen-2xl 2xl:mx-auto">
-    <div
-      class="justify-around bg-[#F4F6FE] px-5 pb-8 pt-12 md:mx-10 lg:mt-6 lg:flex lg:px-[54px] lg:py-14"
-    >
+    <div class="justify-around bg-[#F4F6FE] px-5 pb-8 pt-12 md:mx-10 lg:mt-6 lg:flex lg:px-[54px] lg:py-14">
       <div class="mb-10 md:mb-0 md:mt-16">
-        <div
-          class="flex w-fit items-center gap-x-[22px] rounded-[33px] bg-white py-[10px] pl-2 pr-8"
-        >
-          <span class="rounded-[33px] bg-[#1B58B4] px-3 py-[6px] text-xs font-semibold text-white"
-            >PIXEL</span
-          >
+        <div class="flex w-fit items-center gap-x-[22px] rounded-[33px] bg-white py-[10px] pl-2 pr-8">
+          <span class="rounded-[33px] bg-[#1B58B4] px-3 py-[6px] text-xs font-semibold text-white">PIXEL</span>
 
           <p class="text-sm font-medium">Hello, I’m Kingsley Omin.</p>
         </div>
 
-        <p
-          class="mb-10 mt-10 max-w-[371px] text-[28px] font-semibold md:mt-[46px] md:max-w-[434px] md:text-[56px]"
-        >
+        <p class="mb-10 mt-10 max-w-[371px] text-[28px] font-semibold md:mt-[46px] md:max-w-[434px] md:text-[56px]">
           Hi there, nice to meet you.
         </p>
       </div>
@@ -50,9 +42,7 @@
         usable.
       </p>
 
-      <a href="#" class="border-b-2 border-b-orange text-[32px] leading-10 text-orange"
-        >My Resume</a
-      >
+      <a href="#" class="border-b-2 border-b-orange text-[32px] leading-10 text-orange">My Resume</a>
     </div>
   </main>
 </template>

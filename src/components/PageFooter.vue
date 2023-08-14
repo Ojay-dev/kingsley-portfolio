@@ -1,10 +1,10 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 
-import FacebookIcon from '../components/icons/IconFacebook.vue';
-import TwitterIcon from '../components/icons/IconTwitter.vue';
-import LinkedinIcon from '../components/icons/IconLinkedin.vue';
-import MediumIcon from '../components/icons/IconMedium.vue';
+import FacebookIcon from '@/components/icons/IconFacebook.vue';
+import TwitterIcon from '@/components/icons/IconTwitter.vue';
+import LinkedinIcon from '@/components/icons/IconLinkedin.vue';
+import MediumIcon from '@/components/icons/IconMedium.vue';
 </script>
 
 <template>
@@ -35,10 +35,10 @@ import MediumIcon from '../components/icons/IconMedium.vue';
     <p class="footer-email text-base">kingsleyomin23@gmail.com</p>
 
     <nav class="footer-links flex lg:gap-x-3">
-      <RouterLink to="/" class="text-sm text-body-text">My Works</RouterLink>
-      <RouterLink to="/about-me" class="text-sm text-body-text">About Me</RouterLink>
-      <RouterLink to="#" class="text-sm text-body-text">My Resume</RouterLink>
-      <RouterLink to="#" class="text-sm text-body-text">Contact</RouterLink>
+      <router-link to="/" class="text-sm text-body-text">My Works</router-link>
+      <router-link to="/about-me" class="text-sm text-body-text">About Me</router-link>
+      <router-link to="#" class="text-sm text-body-text">My Resume</router-link>
+      <router-link to="#" class="text-sm text-body-text">Contact</router-link>
     </nav>
   </footer>
 </template>

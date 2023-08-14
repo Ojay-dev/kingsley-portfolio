@@ -5,8 +5,31 @@ import DefaultLayout from './layouts/DefaultLayout.vue';
 
 <template>
   <DefaultLayout>
-    <RouterView />
+    <RouterView v-slot="{ Component }">
+      <Transition name="route" mode="out-in">
+        <component :is="Component" />
+      </Transition>
+    </RouterView>
   </DefaultLayout>
 </template>
 
-<style scoped></style>
+<style scoped>
+/* route transitions */
+.route-enter-from {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.route-enter-active {
+  transition: all 300ms ease-out;
+}
+
+.route-leave-to {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.route-leave-active {
+  transition: all 300ms ease-in;
+}
+</style>
